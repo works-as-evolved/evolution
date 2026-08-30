@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Evolution</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="data:;base64,iVBORw0KGgo=">
+</head>
+
+<body>
+  <h1>Evolution</h1>
+  <script>
+    const evolution = /^works-as-evolv(?:(?<evolved>ed)|(?<evolving>ing))\./.exec(location.hostname)?.groups;
+    
+    if (evolution?.evolved) {
+      document.body.insertAdjacentHTML('beforeend', '<pre>stable</pre>')
+    } else if (evolution?.evolving) {
+      document.body.insertAdjacentHTML('beforeend', '<pre>evolving</pre>')
+    } else {
+      document.body.insertAdjacentHTML('beforeend', '<pre>forked</pre>')
+    }
+  </script>
+</body>
+
+</html>
