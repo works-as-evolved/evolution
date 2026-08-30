@@ -11,17 +11,7 @@
 
 <body>
   <h1>Evolution</h1>
-  <script>
-    const evolution = /^works-as-evolv(?:(?<evolved>ed)|(?<evolving>ing))\./.exec(location.hostname)?.groups;
-    
-    if (evolution?.evolved) {
-      document.body.insertAdjacentHTML('beforeend', '<pre>stable</pre>')
-    } else if (evolution?.evolving) {
-      document.body.insertAdjacentHTML('beforeend', '<pre>evolving</pre>')
-    } else {
-      document.body.insertAdjacentHTML('beforeend', '<pre>forked</pre>')
-    }
-  </script>
+  <script src="evolution.js"></script>
 </body>
 
 </html>
